@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 
+import java.time.Month;
 import java.util.EnumSet;
 
 class SeasonTest {
@@ -17,10 +18,10 @@ class SeasonTest {
     }
 
     @ParameterizedTest
-    @EnumSource(value = Seasons.class,
-            names = {"AUTUMN"})
-    void shouldReturnSeasonName(Seasons season){
-        Assertions.assertEquals("Jesien", Season.getSeasonsName(season));
+    @EnumSource(value = Month.class,
+            names = {"JANUARY"})
+    void shouldReturnSeasonName(Month month){
+        Assertions.assertEquals("WINTER", Season.getSeasonsName(month));
     }
 
 }
