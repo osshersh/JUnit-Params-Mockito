@@ -18,7 +18,7 @@ class NumbersTest {
 
     @ParameterizedTest
     @ValueSource(ints = {1, 3, 7, 11})
-    void shouldReturnTrueWhenNumberIsOdd(int value) {
+    void shouldProperWhenNumberIsNotEven(int value) {
         Assertions.assertFalse(Numbers.isEven(value));
     }
 

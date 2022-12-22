@@ -9,8 +9,13 @@ class TextTest {
 
     @ParameterizedTest
     @NullAndEmptySource
-    @ValueSource(strings = {"TEXT", "TEST", "HELLO"})
-    void shouldReturnToUpperCaseText(String text) {
-        Assertions.assertEquals(text, Text.returnToUpperCaseText(text));
+    void shouldProperWhenTextIsNull(String text) {
+        Assertions.assertEquals(text, Text.convertToUpperCaseText(text));
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"text"})
+    void shouldReturnTrueWhenTextConvertToUpperCase(String text){
+        Assertions.assertEquals("TEXT", Text.convertToUpperCaseText(text));
     }
 }
