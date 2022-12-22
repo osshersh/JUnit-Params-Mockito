@@ -11,7 +11,7 @@ public class Numbers {
         return sum;
     }
 
-    public static boolean IsNumberDivide2(int value) {
+    public static boolean isEven(int value) {
         return value % 2 == 0;
     }
 }

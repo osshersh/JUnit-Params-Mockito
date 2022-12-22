@@ -12,14 +12,19 @@ class NumbersTest {
 
     @ParameterizedTest
     @ValueSource(ints = {2, 4, 6, 8})
-    void shouldReturnTrueWhenValueIsDivide2(int value) {
-        Assertions.assertTrue(Numbers.IsNumberDivide2(value));
+    void shouldReturnTrueWhenNumberIsEven(int value) {
+        Assertions.assertTrue(Numbers.isEven(value));
     }
 
+    @ParameterizedTest
+    @ValueSource(ints = {1, 3, 7, 11})
+    void shouldReturnTrueWhenNumberIsOdd(int value) {
+        Assertions.assertFalse(Numbers.isEven(value));
+    }
 
     @ParameterizedTest
     @CsvSource(value = {"6, 123", "15, 555", "32, 8888"})
-    void shouldReturnSumOfNumber(int sum, int num) {
-        Assertions.assertEquals(sum, Numbers.calculateSumNumber(num));
+    void shouldReturnSumOfNumber(int sum, int number) {
+        Assertions.assertEquals(sum, Numbers.calculateSumNumber(number));
     }
 }
