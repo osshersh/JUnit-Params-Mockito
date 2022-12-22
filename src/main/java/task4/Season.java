@@ -3,10 +3,6 @@ package task4;
 import java.time.Month;
 
 public class Season {
-    public static void main(String[] args) {
-        System.out.println(getSeasonsName(Month.DECEMBER));
-    }
-
 
     public static String getSeasonsName(Month month) {
         switch (month) {
