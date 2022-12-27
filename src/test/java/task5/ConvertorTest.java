@@ -10,7 +10,7 @@ import static org.mockito.Mockito.when;
 class ConvertorTest {
 
     @Test
-    void shouldConvertZlotyToCurrencyBay() {
+    void shouldConvertZlotyToCurrencyBuy() {
         CurrencyValueProvider currencyValueProvider = Mockito.mock(CurrencyValueProvider.class);
         Convertor convertor = new Convertor(currencyValueProvider);
         when(currencyValueProvider.getBuyValueOfCurrency(ArgumentMatchers.any())).thenReturn(1.0);
